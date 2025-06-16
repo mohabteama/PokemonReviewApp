@@ -1,0 +1,10 @@
+﻿global using PokemonReviewApp.Interface;
+global using PokemonReviewApp.Repository;
+global using AutoMapper;
+global using Microsoft.AspNetCore.Mvc;
+global using PokemonReviewApp.Dto;
+global using PokemonReviewApp.Interfaces;
+global using PokemonReviewApp.Models;
+global using PokemonReviewApp.Data;
+global using Microsoft.EntityFrameworkCore;
+global using PokemonReviewApp.Services.Interfaces;
