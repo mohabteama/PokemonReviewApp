@@ -1,7 +1,7 @@
 ﻿
 namespace PokemonReviewApp.Interface
 {
-    public interface IPokemonRepository : IRepository<Pokemon>
+    public interface IPokemonRepository : IGenericRepository<Pokemon>
     {
         decimal GetPokemonRating(int Id);
         object GetPokemonTrimToUpper(PokemonDto pokemonCreate);

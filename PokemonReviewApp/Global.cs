@@ -8,3 +8,4 @@ global using PokemonReviewApp.Models;
 global using PokemonReviewApp.Data;
 global using Microsoft.EntityFrameworkCore;
 global using PokemonReviewApp.Services.Interfaces;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

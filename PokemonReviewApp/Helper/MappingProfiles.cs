@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using PokemonReviewApp.Dto;
-using PokemonReviewApp.Models;
-
+﻿
 namespace PokemonReviewApp.Helper
 {
     public class MappingProfiles : Profile
@@ -9,7 +6,8 @@ namespace PokemonReviewApp.Helper
         public MappingProfiles()
         {
             CreateMap<Pokemon, PokemonDto>().ReverseMap();
-            CreateMap<Category, CategoryDto>().ReverseMap();
+            CreateMap<CategoryDto, Category>().ForMember(x => x.PokemonCategories,x=>x.Ignore());
+            CreateMap<Category, CategoryDto>();
             CreateMap<Country, CountryDto>().ReverseMap();
             CreateMap<Owner, OwnerDto>().ReverseMap();
             CreateMap<Review, ReviewDto>().ReverseMap();

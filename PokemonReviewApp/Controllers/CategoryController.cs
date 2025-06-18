@@ -43,17 +43,17 @@ public class CategoryController : ControllerBase
         return StatusCode(201, "Successfully created");
     }
 
-    [HttpPut("{categoryId}")]
-    public IActionResult UpdateCategory(int categoryId, [FromBody] CategoryDto updatedCategory)
-    {
-        if (updatedCategory == null || categoryId != updatedCategory.Id)
-            return BadRequest();
+    //[HttpPut("{categoryId}")]
+    //public IActionResult UpdateCategory(int categoryId, [FromBody] CategoryDto updatedCategory)
+    //{
+    //    if (updatedCategory == null || categoryId != updatedCategory.Id)
+    //        return BadRequest();
 
-        var result = _categoryService.UpdateCategory(categoryId, updatedCategory);
-        if (!result) return NotFound();
+    //    var result = _categoryService.UpdateCategory(categoryId, updatedCategory);
+    //    if (!result) return NotFound();
 
-        return NoContent();
-    }
+    //    return NoContent();
+    //}
 
     [HttpDelete("{categoryId}")]
     public IActionResult DeleteCategory(int categoryId)

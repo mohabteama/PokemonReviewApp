@@ -44,7 +44,7 @@
 
     public bool UpdateCategory(int id, CategoryDto categoryDto)
     {
-        if (id != categoryDto.Id || !_categoryRepository.Exists(id))
+       // if (id != categoryDto.Id || !_categoryRepository.Exists(id))
             return false;
 
         var category = _mapper.Map<Category>(categoryDto);

@@ -10,8 +10,7 @@ namespace PokemonReviewApp.Controllers
         public PokemonController(IPokemonService pokemonService)
         {
             _pokemonService = pokemonService;
-        }
-
+        } 
         [HttpGet]
         public IActionResult GetPokemons()
         {

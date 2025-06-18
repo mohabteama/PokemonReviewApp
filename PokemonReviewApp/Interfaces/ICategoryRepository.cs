@@ -1,7 +1,7 @@
 ﻿
 namespace PokemonReviewApp.Interface
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
         ICollection<Pokemon> GetPokemonByCategory(int categoryId);
     }

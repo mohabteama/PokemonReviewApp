@@ -48,7 +48,6 @@ namespace PokemonReviewApp.Repository
 
         public bool UpdatePokemon(int ownerId, int categoryId, Pokemon pokemon)
         {
-            // Optional: handle relations if needed
             _context.Update(pokemon);
             return Save();
         }

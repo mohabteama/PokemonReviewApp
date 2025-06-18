@@ -1,7 +1,7 @@
 ﻿
 namespace PokemonReviewApp.Repository
 {
-    public class GenericRepository<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly ApplicationDbContext _context;
         protected readonly DbSet<T> _dbSet;
@@ -24,7 +24,6 @@ namespace PokemonReviewApp.Repository
 
         public T GetByName(string name)
         {
-            // This assumes the entity has a "Name" property
             return _dbSet.FirstOrDefault(e => EF.Property<string>(e, "Name") == name);
         }
 
